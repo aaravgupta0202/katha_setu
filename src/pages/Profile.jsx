@@ -1,4 +1,4 @@
-import { Lock, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Lock, CheckCircle2, AlertCircle, Compass, Map, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import PlaceholderImage from '../components/PlaceholderImage';
 
@@ -43,14 +43,14 @@ export default function Profile() {
       {/* Badges */}
       <div className="flex justify-between items-start px-2">
         <div className="flex flex-col items-center gap-2">
-          <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center border-2 border-terracotta shadow-sm overflow-hidden">
-            <PlaceholderImage src="/assets/img/badge-explorer.png" alt="Explorer" iconSize={24} className="opacity-80 w-full h-full" />
+          <div className="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center border-2 border-terracotta shadow-sm">
+            <Compass size={28} className="text-terracotta" />
           </div>
           <span className="text-[9px] font-bold uppercase text-center leading-tight">Katha<br/>Explorer</span>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center border-2 border-brick shadow-sm overflow-hidden">
-            <PlaceholderImage src="/assets/img/badge-discoverer.png" alt="Discoverer" iconSize={24} className="opacity-80 w-full h-full" />
+          <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center border-2 border-brick shadow-sm">
+            <Map size={28} className="text-brick" />
           </div>
           <span className="text-[9px] font-bold uppercase text-center leading-tight">Site<br/>Discoverer</span>
         </div>
@@ -61,8 +61,8 @@ export default function Profile() {
           <span className="text-[9px] font-bold uppercase text-center leading-tight text-gray-500">Culture<br/>Champion</span>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <div className="w-14 h-14 rounded-full bg-teal/20 flex items-center justify-center border-2 border-teal shadow-sm overflow-hidden">
-            <PlaceholderImage src="/assets/img/badge-sage.png" alt="Sage" iconSize={24} className="opacity-80 w-full h-full" />
+          <div className="w-14 h-14 rounded-full bg-teal/20 flex items-center justify-center border-2 border-teal shadow-sm">
+            <BookOpen size={28} className="text-teal" />
           </div>
           <span className="text-[9px] font-bold uppercase text-center leading-tight">History<br/>Sage</span>
         </div>

@@ -14,7 +14,9 @@ export const translations = {
     whyMade: 'Why It Was Made',
     whyMadeText: 'Temple builders placed Yali figures at pillar bases and entrances to ward off evil and mark the threshold between the ordinary world and sacred space, a role similar to guardian lions in other Asian traditions.',
     relatedStories: 'Related Stories',
-    nowPlaying: 'Now Playing...'
+    nowPlaying: 'Now Playing...',
+    aiGuide: 'I am your AI Guide. Ask me anything about the Yali guardian, or press the mic to speak!',
+    askQuestion: 'Ask a question...'
   },
   HI: {
     langName: 'हिंदी',
@@ -31,7 +33,9 @@ export const translations = {
     whyMade: 'इसे क्यों बनाया गया',
     whyMadeText: 'मंदिर बनाने वालों ने बुराई को दूर करने और साधारण दुनिया व पवित्र स्थान के बीच की सीमा को चिह्नित करने के लिए याली आकृतियों को खंभों और प्रवेश द्वारों पर रखा।',
     relatedStories: 'संबंधित कहानियाँ',
-    nowPlaying: 'अब बज रहा है...'
+    nowPlaying: 'अब बज रहा है...',
+    aiGuide: 'मैं आपका एआई गाइड हूं। मुझसे याली संरक्षक के बारे में कुछ भी पूछें, या बोलने के लिए माइक दबाएं!',
+    askQuestion: 'कोई प्रश्न पूछें...'
   },
   KN: {
     langName: 'ಕನ್ನಡ',
@@ -48,7 +52,9 @@ export const translations = {
     whyMade: 'ಇದನ್ನು ಏಕೆ ಮಾಡಲಾಯಿತು',
     whyMadeText: 'ದುಷ್ಟ ಶಕ್ತಿಗಳನ್ನು ದೂರವಿಡಲು ಮತ್ತು ಸಾಮಾನ್ಯ ಪ್ರಪಂಚ ಹಾಗೂ ಪವಿತ್ರ ಸ್ಥಳದ ನಡುವಿನ ಗಡಿಯನ್ನು ಗುರುತಿಸಲು ದೇವಾಲಯ ನಿರ್ಮಾತೃಗಳು ಯಾಳಿ ಆಕೃತಿಗಳನ್ನು ಕಂಬದ ತಳಭಾಗದಲ್ಲಿ ಮತ್ತು ಪ್ರವೇಶದ್ವಾರಗಳಲ್ಲಿ ಇರಿಸಿದರು.',
     relatedStories: 'ಸಂಬಂಧಿತ ಕಥೆಗಳು',
-    nowPlaying: 'ಪ್ಲೇ ಆಗುತ್ತಿದೆ...'
+    nowPlaying: 'ಪ್ಲೇ ಆಗುತ್ತಿದೆ...',
+    aiGuide: 'ನಾನು ನಿಮ್ಮ AI ಮಾರ್ಗದರ್ಶಿ. ಯಾಳಿ ಕಾವಲುಗಾರನ ಬಗ್ಗೆ ಏನನ್ನಾದರೂ ಕೇಳಿ, ಅಥವಾ ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ!',
+    askQuestion: 'ಒಂದು ಪ್ರಶ್ನೆ ಕೇಳಿ...'
   },
   TA: {
     langName: 'தமிழ்',
@@ -65,7 +71,9 @@ export const translations = {
     whyMade: 'இது ஏன் உருவாக்கப்பட்டது',
     whyMadeText: 'தீமைகளைத் தடுக்கவும், சாதாரண உலகிற்கும் புனித இடத்திற்கும் இடையிலான எல்லையைக் குறிக்கவும் கோயில் கட்டுபவர்கள் யாளி உருவங்களை தூண்களின் அடிப்பகுதியிலும் நுழைவாயில்களிலும் வைத்தனர்.',
     relatedStories: 'தொடர்புடைய கதைகள்',
-    nowPlaying: 'ஒலிக்கிறது...'
+    nowPlaying: 'ஒலிக்கிறது...',
+    aiGuide: 'நான் உங்கள் AI வழிகாட்டி. யாளி காவலரைப் பற்றி என்னிடம் எதையும் கேளுங்கள் அல்லது பேச மைக்கை அழுத்தவும்!',
+    askQuestion: 'ஒரு கேள்வி கேளுங்கள்...'
   },
   TU: {
     langName: 'ತುಳು',
@@ -82,6 +90,8 @@ export const translations = {
     whyMade: 'ನೆನ್ ದಾಯೆ ಮಲ್ತೆರ್',
     whyMadeText: 'ಎಡ್ಡೆ ಅತ್ತಂದಿನ ಶಕ್ತಿಲೆನ್ ದೂರ್ ದೀಯೆರೆ ಬೊಕ್ಕ ಸಾಮಾನ್ಯ ಪ್ರಪಂಚ-ಪವಿತ್ರ ಜಾಗೆದ ನಡುತ ಗಡಿನ್ ತೋಜಾಯೆರೆ ದೇವಸ್ಥಾನ ಕಟ್ಟುನಕುಲು ಯಾಳಿನ್ ಕಂಬದ ತಿರ್ತ್ ಬೊಕ್ಕ ಬಾಕಿಲ್‌ಡ್ ದೀಯೆರ್.',
     relatedStories: 'ಸಂಬಂಧ ಉಪ್ಪುನ ಕತೆಕುಲು',
-    nowPlaying: 'ಪ್ಲೇ ಆವೊಂದುಂಡು...'
+    nowPlaying: 'ಪ್ಲೇ ಆವೊಂದುಂಡು...',
+    aiGuide: 'ಯಾನ್ ನಿಕ್ಲೆನ AI ಮಾರ್ಗದರ್ಶಿ. ಯಾಳಿ ಕಾವಲುಗಾರನ ಬಗ್ಗೆ ದಾದಾಂಡಲಾ ಕೇನ್ಲೆ, ಅತ್ತ್ಂಡ ಪಾತೆರೆರೆ ಮೈಕ್ ಒತ್ತುಲೆ!',
+    askQuestion: 'ಒಂಜಿ ಪ್ರಶ್ನೆ ಕೇನ್ಲೆ...'
   }
 };

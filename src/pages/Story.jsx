@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Play, Pause, Globe, Sparkles, Mic } from 'lucide-react';
 import PlaceholderImage from '../components/PlaceholderImage';
@@ -8,13 +8,33 @@ import { translations } from '../utils/translations';
 export default function Story() {
   const navigate = useNavigate();
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
   const { lang, setSpecificLang } = useLanguage();
   const t = translations[lang];
 
   const langs = ['EN', 'HI', 'KN', 'TA', 'TU'];
 
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(e => console.log('Audio playback failed', e));
+      }
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="min-h-screen bg-parchment flex flex-col">
+      {/* Hidden Audio Element */}
+      <audio 
+        ref={audioRef} 
+        src="/assets/audio/yali-story.mp4" 
+        onEnded={() => setIsPlaying(false)} 
+        className="hidden"
+      />
+
       {/* Header */}
       <div className="p-4 pt-6 flex items-center gap-4 bg-parchment/90 backdrop-blur-sm sticky top-0 z-20">
         <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-navy hover:bg-gray-200/50 rounded-full transition-colors">
@@ -59,12 +79,12 @@ export default function Story() {
           ))}
         </div>
 
-        {/* Audio/Video Player (Cosmetic) */}
+        {/* Audio/Video Player */}
         <div className="relative w-full h-48 rounded-2xl overflow-hidden shadow-md my-4 border border-gray-200">
           <PlaceholderImage src="/assets/img/yali-guardian.jpg" alt="Video Thumbnail" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center">
             <button 
-              onClick={() => setIsPlaying(!isPlaying)}
+              onClick={togglePlay}
               className="w-16 h-16 bg-terracotta/90 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-terracotta transition-colors transform hover:scale-105 active:scale-95 backdrop-blur-sm"
             >
               {isPlaying ? <Pause size={28} fill="currentColor" /> : <Play size={28} fill="currentColor" className="ml-1" />}

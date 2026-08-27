@@ -7,6 +7,7 @@ import Story from './pages/Story';
 import TagFeature from './pages/TagFeature';
 import Map from './pages/Map';
 import Profile from './pages/Profile';
+import Amenities from './pages/Amenities';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/tag" element={<TagFeature />} />
             <Route path="/map" element={<Map />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/amenities/:type" element={<Amenities />} />
           </Route>
         </Routes>
       </Router>

@@ -113,15 +113,15 @@ export default function Home() {
           <h3 className="font-serif font-bold text-lg tracking-wide">{t.planVisit || 'Plan Your Visit'}</h3>
         </div>
         <div className="grid grid-cols-3 gap-3">
-          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+          <div onClick={() => navigate('/amenities/food')} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
              <div className="w-10 h-10 rounded-full bg-orange-100 text-terracotta flex items-center justify-center"><Utensils size={18} /></div>
              <span className="text-[10px] font-bold leading-tight">{t.localFood || 'Local Food'}</span>
           </div>
-          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+          <div onClick={() => navigate('/amenities/stay')} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
              <div className="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center"><Bed size={18} /></div>
              <span className="text-[10px] font-bold leading-tight">{t.heritageStays || 'Heritage Stays'}</span>
           </div>
-          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+          <div onClick={() => navigate('/amenities/transport')} className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
              <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center"><Bus size={18} /></div>
              <span className="text-[10px] font-bold leading-tight">{t.transport || 'Transport'}</span>
           </div>

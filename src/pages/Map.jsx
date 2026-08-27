@@ -9,21 +9,21 @@ export default function MapScreen() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-[100dvh] flex flex-col relative bg-[#EFEFEF] overflow-hidden">
-      {/* Background Map (Cosmetic) */}
-      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
-        <iframe width="100%" height="100%" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=74.7%2C13.3%2C74.9%2C13.5&amp;layer=mapnik" className="grayscale contrast-125 sepia-[.3]"></iframe>
+    <div className="h-[100dvh] w-full flex flex-col relative bg-[#EFEFEF] overflow-hidden fixed inset-0">
+      {/* Background Map Image */}
+      <div className="absolute inset-0 z-0">
+        <img src="/assets/img/terrain-map.jpg" alt="Map" className="w-full h-full object-cover opacity-80" />
       </div>
 
       {/* Floating Amenity Chips */}
       <div className="absolute bottom-24 left-1/2 -translate-x-1/2 w-11/12 max-w-[360px] flex gap-2 overflow-x-auto scrollbar-hide py-2 px-1 z-20">
-        <button className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
+        <button onClick={() => navigate('/amenities/food')} className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
           <Coffee size={14} className="text-terracotta" /> {t.localFood || 'Local Food'}
         </button>
-        <button className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
+        <button onClick={() => navigate('/amenities/stay')} className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
           <Bed size={14} className="text-teal" /> {t.heritageStays || 'Heritage Stays'}
         </button>
-        <button className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
+        <button onClick={() => navigate('/amenities/transport')} className="bg-white px-4 py-2.5 rounded-full shadow-md text-[11px] font-bold text-navy flex items-center gap-2 shrink-0 hover:bg-gray-50 border border-gray-100 transition-transform transform hover:scale-105 active:scale-95">
           <Bus size={14} className="text-blue-600" /> {t.transport || 'Transport'}
         </button>
       </div>

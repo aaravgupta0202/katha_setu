@@ -74,13 +74,13 @@ export default function Profile() {
         <div className="space-y-3">
           <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
             <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden shrink-0">
-              <PlaceholderImage src="/assets/img/avatar2.jpg" alt="User" className="w-full h-full" />
+              <img src="https://ui-avatars.com/api/?name=Krishnendu&background=random" alt="User" className="w-full h-full" />
             </div>
             <p className="text-xs font-medium"><span className="font-bold">Krishnendu</span> verified a myth · <span className="text-gray-500">23 May 2025</span></p>
           </div>
           <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
             <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden shrink-0">
-              <PlaceholderImage src="/assets/img/avatar3.jpg" alt="User" className="w-full h-full" />
+              <img src="https://ui-avatars.com/api/?name=Aarav+Gupta&background=random" alt="User" className="w-full h-full" />
             </div>
             <p className="text-xs font-medium"><span className="font-bold">Aarav Gupta</span> flagged 5 new items · <span className="text-gray-500">21 May 2025</span></p>
           </div>

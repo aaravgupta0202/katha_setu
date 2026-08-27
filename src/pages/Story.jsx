@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Play, Pause, Globe } from 'lucide-react';
+import { ArrowLeft, Play, Pause, Globe, Sparkles, Mic } from 'lucide-react';
 import PlaceholderImage from '../components/PlaceholderImage';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
@@ -59,19 +59,43 @@ export default function Story() {
           ))}
         </div>
 
-        {/* Audio Player (Cosmetic) */}
-        <div className="flex flex-col items-center justify-center py-8">
-          <button 
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="w-16 h-16 bg-navy text-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors transform hover:scale-105 active:scale-95"
-          >
-            {isPlaying ? <Pause size={28} fill="currentColor" /> : <Play size={28} fill="currentColor" className="ml-1" />}
-          </button>
-          {isPlaying && (
-            <span className="text-xs text-terracotta font-semibold mt-3 animate-pulse">
-              {t.nowPlaying}
-            </span>
-          )}
+        {/* Audio/Video Player (Cosmetic) */}
+        <div className="relative w-full h-48 rounded-2xl overflow-hidden shadow-md my-4 border border-gray-200">
+          <PlaceholderImage src="/assets/img/yali-guardian.jpg" alt="Video Thumbnail" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center">
+            <button 
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="w-16 h-16 bg-terracotta/90 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-terracotta transition-colors transform hover:scale-105 active:scale-95 backdrop-blur-sm"
+            >
+              {isPlaying ? <Pause size={28} fill="currentColor" /> : <Play size={28} fill="currentColor" className="ml-1" />}
+            </button>
+            {isPlaying && (
+              <span className="text-xs text-white font-semibold mt-3 animate-pulse bg-black/60 px-3 py-1 rounded-full">
+                {t.nowPlaying}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* AI Chat Area */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-6 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-2 opacity-10">
+            <Sparkles size={48} />
+          </div>
+          <div className="flex gap-3 mb-4 relative z-10">
+            <div className="w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center shrink-0">
+              <Sparkles size={16} />
+            </div>
+            <div className="bg-gray-50 rounded-2xl rounded-tl-none p-3 text-sm text-navy font-medium border border-gray-100">
+              I am your AI Guide. Ask me anything about the Yali guardian, or press the mic to speak!
+            </div>
+          </div>
+          <div className="flex items-center gap-2 relative z-10">
+            <input type="text" placeholder="Ask a question..." className="flex-1 bg-gray-100 rounded-full px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-1 focus:ring-terracotta" />
+            <button className="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center shrink-0 hover:bg-gray-800 transition-colors shadow-sm">
+              <Mic size={18} />
+            </button>
+          </div>
         </div>
 
         {/* Related Stories */}

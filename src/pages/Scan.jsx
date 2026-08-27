@@ -36,7 +36,7 @@ export default function Scan() {
     <div className="relative h-full bg-black overflow-hidden flex flex-col">
       {/* Background Camera Image */}
       <div className="absolute inset-0 z-0">
-        <PlaceholderImage src="/assets/img/scan-live.jpg" alt="Live Camera" className="w-full h-full object-cover" iconSize={64} />
+        <PlaceholderImage src="/assets/img/scan-live.jpg" alt="Live Camera" className="w-full h-full object-cover object-top" iconSize={64} />
       </div>
 
       {/* Top Bar */}

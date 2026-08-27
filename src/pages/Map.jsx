@@ -4,7 +4,12 @@ import { useNavigate } from 'react-router-dom';
 export default function MapScreen() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col relative bg-[#EFEFEF]">
+    <div className="min-h-[100dvh] flex flex-col relative bg-[#EFEFEF] overflow-hidden">
+      {/* Background Map (Cosmetic) */}
+      <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <iframe width="100%" height="100%" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=74.7%2C13.3%2C74.9%2C13.5&amp;layer=mapnik" className="grayscale contrast-125 sepia-[.3]"></iframe>
+      </div>
+
       {/* Top Search Bar */}
       <div className="absolute top-0 w-full z-20 p-4 pt-6 flex items-center gap-2">
         <button onClick={() => navigate(-1)} className="p-2 bg-white rounded-full shadow-md text-navy shrink-0 hover:bg-gray-50 transition-colors">

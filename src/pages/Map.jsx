@@ -1,18 +1,23 @@
-import { Search, MapPin, Navigation } from 'lucide-react';
+import { Search, MapPin, Navigation, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function MapScreen() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col relative bg-[#EFEFEF]">
       {/* Top Search Bar */}
-      <div className="absolute top-0 w-full z-20 p-4 pt-6">
-        <div className="bg-white rounded-full shadow-md flex items-center px-4 py-3">
+      <div className="absolute top-0 w-full z-20 p-4 pt-6 flex items-center gap-2">
+        <button onClick={() => navigate(-1)} className="p-2 bg-white rounded-full shadow-md text-navy shrink-0 hover:bg-gray-50 transition-colors">
+          <ArrowLeft size={20} />
+        </button>
+        <div className="bg-white rounded-full shadow-md flex items-center px-4 py-3 flex-1">
           <Search size={20} className="text-gray-400 mr-3" />
           <input 
             type="text" 
             defaultValue="Barkur Heritage Trail" 
-            className="flex-1 bg-transparent text-sm font-semibold focus:outline-none"
+            className="flex-1 bg-transparent text-sm font-semibold focus:outline-none w-full"
           />
-          <div className="bg-gray-100 p-1.5 rounded-full">
+          <div className="bg-gray-100 p-1.5 rounded-full ml-2">
             <MapPin size={16} className="text-navy" />
           </div>
         </div>

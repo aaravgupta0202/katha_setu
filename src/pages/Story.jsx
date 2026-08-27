@@ -83,7 +83,7 @@ export default function Story() {
               { title: 'Virupaksha Temple Legends', img: '/assets/img/virupaksha.jpg' },
               { title: 'Guardian Motifs Across India', img: '/assets/img/guardian-motifs.jpg' }
             ].map((item, i) => (
-              <div key={i} className="min-w-[140px] w-[140px] snap-start">
+              <div key={i} className="min-w-[140px] w-[140px] snap-start cursor-pointer transform transition-transform hover:scale-95" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <div className="h-[100px] rounded-xl overflow-hidden mb-2 shadow-sm">
                   <PlaceholderImage src={item.img} alt={item.title} className="w-full h-full object-cover" iconSize={24} />
                 </div>

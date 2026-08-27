@@ -1,7 +1,9 @@
 import { Lock, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import PlaceholderImage from '../components/PlaceholderImage';
 
 export default function Profile() {
+  const navigate = useNavigate();
   const discoveries = [
     {
       title: 'Yali Guardian',
@@ -94,7 +96,11 @@ export default function Profile() {
         
         <div className="space-y-3">
           {discoveries.map((item, i) => (
-            <div key={i} className="flex gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 items-center">
+            <div 
+              key={i} 
+              onClick={() => navigate('/story')}
+              className="flex gap-3 bg-white p-3 rounded-xl shadow-sm border border-gray-100 items-center cursor-pointer hover:bg-gray-50 transition-colors transform hover:scale-[1.02] active:scale-[0.98]"
+            >
               <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
                 <PlaceholderImage src={item.img} alt={item.title} className="w-full h-full object-cover" />
               </div>

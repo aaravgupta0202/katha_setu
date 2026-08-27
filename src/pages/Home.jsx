@@ -76,7 +76,7 @@ export default function Home() {
             { title: 'Vedic Chariots', img: '/assets/img/vedic-chariots.jpg' },
             { title: 'Jain Tirthankara Icons', img: '/assets/img/jain-tirthankara.jpg' }
           ].map((item, i) => (
-            <div key={i} className="min-w-[140px] w-[140px] snap-start">
+            <div key={i} className="min-w-[140px] w-[140px] snap-start cursor-pointer transform transition-transform hover:scale-95" onClick={() => navigate('/story')}>
               <div className="h-[140px] rounded-xl overflow-hidden mb-2 shadow-sm">
                 <PlaceholderImage src={item.img} alt={item.title} className="w-full h-full object-cover" iconSize={24} />
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
             { title: 'Tamil Nadu', img: '/assets/img/tamilnadu.jpg' },
             { title: 'Odisha', img: '/assets/img/odisha.jpg' }
           ].map((item, i) => (
-            <div key={i} className="min-w-[160px] w-[160px] relative rounded-xl overflow-hidden h-[90px] snap-start shadow-sm">
+            <div key={i} className="min-w-[160px] w-[160px] relative rounded-xl overflow-hidden h-[90px] snap-start shadow-sm cursor-pointer transform transition-transform hover:scale-95" onClick={() => navigate('/story')}>
               <PlaceholderImage src={item.img} alt={item.title} className="w-full h-full object-cover" iconSize={24} />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <span className="text-white font-serif font-semibold text-lg">{item.title}</span>

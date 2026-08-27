@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Upload, MapPin, Info } from 'lucide-react';
 import PlaceholderImage from '../components/PlaceholderImage';
@@ -6,6 +6,7 @@ import PlaceholderImage from '../components/PlaceholderImage';
 export default function TagFeature() {
   const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
+  const fileInputRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,6 +14,10 @@ export default function TagFeature() {
     setTimeout(() => {
       navigate('/');
     }, 2000);
+  };
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
   };
 
   return (
@@ -25,7 +30,7 @@ export default function TagFeature() {
 
       {/* Header */}
       <div className="p-4 pt-6 flex items-center gap-4 bg-parchment/90 backdrop-blur-sm sticky top-0 z-20">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-navy">
+        <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-navy hover:bg-gray-200/50 rounded-full transition-colors">
           <ArrowLeft size={24} />
         </button>
         <h1 className="font-serif text-xl font-bold">Tagging New Feature</h1>
@@ -37,11 +42,20 @@ export default function TagFeature() {
         <div className="flex gap-2 mb-4">
           {[1, 2, 3].map(i => (
             <div key={i} className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
-              <PlaceholderImage src={`/assets/img/thumb-${i}.jpg`} alt="Thumbnail" className="w-full h-full" iconSize={16} />
+              <PlaceholderImage src={`/assets/img/thumb-${i}.jpg`} alt="Thumbnail" className="w-full h-full object-cover" iconSize={16} />
             </div>
           ))}
+          <input 
+            type="file" 
+            multiple 
+            accept="image/*" 
+            className="hidden" 
+            ref={fileInputRef} 
+          />
           <button 
-            className="w-16 h-16 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-500 shrink-0 hover:border-terracotta transition-colors"
+            type="button"
+            onClick={handleUploadClick}
+            className="w-16 h-16 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-500 shrink-0 hover:border-terracotta hover:text-terracotta hover:bg-orange-50 transition-colors"
           >
             <Upload size={16} className="mb-1" />
             <span className="text-[9px] font-semibold text-center leading-tight">Multi-<br/>upload</span>

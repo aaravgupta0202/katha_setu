@@ -30,7 +30,7 @@ export default function Story() {
       {/* Hidden Audio Element */}
       <audio 
         ref={audioRef} 
-        src="/assets/audio/yali-story.mp4" 
+        src="/assets/audio/yali-story.mp3" 
         onEnded={() => setIsPlaying(false)} 
         className="hidden"
       />

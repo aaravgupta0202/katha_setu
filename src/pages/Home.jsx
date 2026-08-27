@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Camera, MapPin, Bookmark, Users, ChevronRight, Globe } from 'lucide-react';
+import { Camera, MapPin, Bookmark, Users, ChevronRight, Globe, Utensils, Bed, Bus } from 'lucide-react';
 import PlaceholderImage from '../components/PlaceholderImage';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
@@ -104,6 +104,27 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Amenities / Tourism */}
+      <div className="pb-2">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-serif font-bold text-lg tracking-wide">{t.planVisit || 'Plan Your Visit'}</h3>
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+             <div className="w-10 h-10 rounded-full bg-orange-100 text-terracotta flex items-center justify-center"><Utensils size={18} /></div>
+             <span className="text-[10px] font-bold leading-tight">{t.localFood || 'Local Food'}</span>
+          </div>
+          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+             <div className="w-10 h-10 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center"><Bed size={18} /></div>
+             <span className="text-[10px] font-bold leading-tight">{t.heritageStays || 'Heritage Stays'}</span>
+          </div>
+          <div className="bg-white rounded-xl p-3 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-2 cursor-pointer hover:bg-gray-50 transform hover:scale-105 transition-all">
+             <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center"><Bus size={18} /></div>
+             <span className="text-[10px] font-bold leading-tight">{t.transport || 'Transport'}</span>
+          </div>
         </div>
       </div>
     </div>

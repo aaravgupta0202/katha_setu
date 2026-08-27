@@ -16,7 +16,11 @@ export const translations = {
     relatedStories: 'Related Stories',
     nowPlaying: 'Now Playing...',
     aiGuide: 'I am your AI Guide. Ask me anything about the Yali guardian, or press the mic to speak!',
-    askQuestion: 'Ask a question...'
+    askQuestion: 'Ask a question...',
+    planVisit: 'Plan Your Visit',
+    localFood: 'Local Food',
+    heritageStays: 'Heritage Stays',
+    transport: 'Transport'
   },
   HI: {
     langName: 'हिंदी',
@@ -35,7 +39,11 @@ export const translations = {
     relatedStories: 'संबंधित कहानियाँ',
     nowPlaying: 'अब बज रहा है...',
     aiGuide: 'मैं आपका एआई गाइड हूं। मुझसे याली संरक्षक के बारे में कुछ भी पूछें, या बोलने के लिए माइक दबाएं!',
-    askQuestion: 'कोई प्रश्न पूछें...'
+    askQuestion: 'कोई प्रश्न पूछें...',
+    planVisit: 'अपनी यात्रा की योजना बनाएं',
+    localFood: 'स्थानीय भोजन',
+    heritageStays: 'विरासत निवास',
+    transport: 'परिवहन'
   },
   KN: {
     langName: 'ಕನ್ನಡ',
@@ -54,7 +62,11 @@ export const translations = {
     relatedStories: 'ಸಂಬಂಧಿತ ಕಥೆಗಳು',
     nowPlaying: 'ಪ್ಲೇ ಆಗುತ್ತಿದೆ...',
     aiGuide: 'ನಾನು ನಿಮ್ಮ AI ಮಾರ್ಗದರ್ಶಿ. ಯಾಳಿ ಕಾವಲುಗಾರನ ಬಗ್ಗೆ ಏನನ್ನಾದರೂ ಕೇಳಿ, ಅಥವಾ ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ!',
-    askQuestion: 'ಒಂದು ಪ್ರಶ್ನೆ ಕೇಳಿ...'
+    askQuestion: 'ಒಂದು ಪ್ರಶ್ನೆ ಕೇಳಿ...',
+    planVisit: 'ನಿಮ್ಮ ಭೇಟಿಯನ್ನು ಯೋಜಿಸಿ',
+    localFood: 'ಸ್ಥಳೀಯ ಆಹಾರ',
+    heritageStays: 'ಪಾರಂಪರಿಕ ವಾಸ್ತವ್ಯಗಳು',
+    transport: 'ಸಾರಿಗೆ'
   },
   TA: {
     langName: 'தமிழ்',
@@ -73,7 +85,11 @@ export const translations = {
     relatedStories: 'தொடர்புடைய கதைகள்',
     nowPlaying: 'ஒலிக்கிறது...',
     aiGuide: 'நான் உங்கள் AI வழிகாட்டி. யாளி காவலரைப் பற்றி என்னிடம் எதையும் கேளுங்கள் அல்லது பேச மைக்கை அழுத்தவும்!',
-    askQuestion: 'ஒரு கேள்வி கேளுங்கள்...'
+    askQuestion: 'ஒரு கேள்வி கேளுங்கள்...',
+    planVisit: 'உங்கள் பயணத்தை திட்டமிடுங்கள்',
+    localFood: 'உள்ளூர் உணவு',
+    heritageStays: 'பாரம்பரிய தங்குமிடங்கள்',
+    transport: 'போக்குவரத்து'
   },
   TU: {
     langName: 'ತುಳು',
@@ -92,6 +108,10 @@ export const translations = {
     relatedStories: 'ಸಂಬಂಧ ಉಪ್ಪುನ ಕತೆಕುಲು',
     nowPlaying: 'ಪ್ಲೇ ಆವೊಂದುಂಡು...',
     aiGuide: 'ಯಾನ್ ನಿಕ್ಲೆನ AI ಮಾರ್ಗದರ್ಶಿ. ಯಾಳಿ ಕಾವಲುಗಾರನ ಬಗ್ಗೆ ದಾದಾಂಡಲಾ ಕೇನ್ಲೆ, ಅತ್ತ್ಂಡ ಪಾತೆರೆರೆ ಮೈಕ್ ಒತ್ತುಲೆ!',
-    askQuestion: 'ಒಂಜಿ ಪ್ರಶ್ನೆ ಕೇನ್ಲೆ...'
+    askQuestion: 'ಒಂಜಿ ಪ್ರಶ್ನೆ ಕೇನ್ಲೆ...',
+    planVisit: 'ನಿಕ್ಲೆನ ಭೇಟಿನ್ ಯೋಜಿಸಲೆ',
+    localFood: 'ಊರುದ ವನಸ್',
+    heritageStays: 'ಪಾರಂಪರಿಕ ವಾಸ್ತವ್ಯ',
+    transport: 'ಸಾರಿಗೆ'
   }
 };
